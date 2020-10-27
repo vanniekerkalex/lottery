@@ -1,4 +1,52 @@
+from pprint import pprint
+
 pbArr = [
+  [1,13,24,27,38,1], # powerball plus 2020.10.23
+  [16,18,30,31,37,17], # powerball plus 2020.10.20
+  [22,31,40,47,48,15], # powerball plus 2020.10.16
+  [13,17,22,33,41,5], # powerball plus 2020.10.13
+  [9,11,32,36,46,18], # powerball plus 2020.10.09
+  [14,16,17,41,46,9], # powerball plus 2020.10.06
+  [7,14,25,32,42,15], # powerball plus 2020.10.02
+  [1,5,16,17,37,5], # powerball plus 2020.09.29
+  [12,22,26,46,49,4], # powerball plus 2020.09.25
+  [2,8,12,37,47,15], # powerball plus 2020.09.22
+  [14,40,41,45,47,7], # powerball plus 2020.09.18
+  [1,12,19,27,28,1], # powerball plus 2020.09.15
+  [7,12,24,25,34,9], # powerball plus 2020.09.11
+  [22,24,29,33,40,10], # powerball plus 2020.09.08
+  [8,9,11,30,45,1], # powerball plus 2020.09.04
+  [1,14,31,33,45,11], # powerball plus 2020.09.01
+  [9,11,14,22,27,4], # powerball plus 2020.08.28
+  [2,11,25,28,42,3], # powerball plus 2020.08.25
+  [2,9,18,25,43,2], # powerball plus 2020.08.21
+  [1,15,25,35,49,7], # powerball plus 2020.08.18
+  [3,7,15,23,33,17], # powerball plus 2020.08.14
+  [1,13,20,28,45,11], # powerball plus 2020.08.11
+  [14,15,22,23,29,11], # powerball plus 2020.08.07
+  [3,6,36,41,43,17], # powerball 2020.10.23
+  [15,20,29,32,45,4], # powerball 2020.10.20
+  [1,7,18,37,48,13], # powerball 2020.10.16
+  [13,15,20,27,28,7], # powerball 2020.10.13
+  [8,21,38,41,50,4], # powerball 2020.10.09
+  [6,21,25,29,33,9], # powerball 2020.10.06
+  [8,10,23,41,50,9], # powerball 2020.10.02
+  [7,12,16,28,38,13], # powerball 2020.09.29
+  [2,17,18,27,37,4], # powerball 2020.09.25
+  [3,10,28,31,41,7], # powerball 2020.09.22
+  [8,19,24,29,44,8], # powerball 2020.09.18
+  [3,18,32,40,46,7], # powerball 2020.09.15
+  [1,4,10,12,49,18], # powerball 2020.09.11
+  [12,13,14,36,50,6], # powerball 2020.09.08
+  [2,3,11,12,43,13], # powerball 2020.09.04
+  [16,21,22,36,39,5], # powerball 2020.09.01
+  [8,10,17,44,45,12], # powerball 2020.08.28
+  [7,20,32,34,48,1], # powerball 2020.08.25
+  [13,32,33,40,41,1], # powerball 2020.08.21
+  [6,22,30,39,49,2], # powerball 2020.08.18
+  [10,11,16,25,30,1], # powerball 2020.08.14
+  [27,29,39,40,42,6], # powerball 2020.08.11
+  [11,30,42,45,48,12], # powerball 2020.08.07
 	[4,28,34,38,47,16], # powerball 2020-08-04
 	[5,13,21,31,33,14], # powerball plus 2020-08-04
 	[6,18,30,46,48,11], # powerball 2020-07-31
@@ -1320,6 +1368,7 @@ pbArr = [
   [38,20,15,36,12,6]
 ]
 
+
 # Standard values
 widthBand = 0.5
 midBand = (50+1)/2
@@ -1355,6 +1404,8 @@ weightedLotto[47] += 99
 weightedLotto[48] += 99
 weightedLotto[49] += 99
 weightedLotto[50] += 99
+
+pprint(weightedLotto)
 
 # Sum the number of times powerballs have appeared
 for val in powerArr:
@@ -1430,8 +1481,8 @@ def isAveDrawnAmount(lottoRow, aveTimesNumberDrawn, aveTimesNumberDrawnBand):
 
 
 
-suggestedLotto = leastDrawnLotto[1:18]
-suggestedPower = leastDrawnPower[1:4]
+suggestedLotto = leastDrawnLotto[0:18]
+suggestedPower = leastDrawnPower[0:4]
 print("Lotto:",suggestedLotto)
 print("Power:",suggestedPower)
 
