@@ -16,8 +16,8 @@ numbers = [
 
 # PASTE THE WINNING NUMBERS HERE
 winners = [
-  [1, 16, 27, 40, 44, 1], # PB
-  [3, 22, 27, 35, 44, 7]  # PBP
+  [19,25,41,45,46,12], # PB
+  [6,12,17,31,43,12]  # PBP
 ]
 
 scorePB = 0
@@ -48,6 +48,10 @@ for row in numbers:
   scorePBP = 0
   powerPBP = 0
 
-for row in result:
-  print(' ')
-  print(row)
+if (len(result) > 0):
+  print('You won something! :)')
+  for row in result:
+    print(' ')
+    print(row)
+else:
+  print('You did not win :(')
